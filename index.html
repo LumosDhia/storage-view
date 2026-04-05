@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StorageView | Universal Cloud Dashboard</title>
+    <!-- Google Fonts: Outfit for clean, modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for premium iconography -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="dashboard-wrapper">
+        <!-- Glassmorphic Sidebar -->
+        <aside class="sidebar glass">
+            <div class="logo">
+                <i data-lucide="cpu" class="logo-icon"></i>
+                <h1>Storage<span>View</span></h1>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#" class="nav-item active"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                <a href="#" class="nav-item"><i data-lucide="hard-drive"></i> All Storages</a>
+                <a href="#" class="nav-item"><i data-lucide="file-text"></i> Documents</a>
+                <a href="#" class="nav-item"><i data-lucide="image"></i> Photos & Media</a>
+                <a href="#" class="nav-item"><i data-lucide="share-2"></i> Shared</a>
+            </nav>
+
+            <div class="storage-list-mini">
+                <h3>Connected</h3>
+                <div class="mini-card google active">
+                    <i data-lucide="layers"></i>
+                    <span>Google Drive</span>
+                    <div class="status-dot online"></div>
+                </div>
+                <div class="mini-card r2 mt-8">
+                    <i data-lucide="zap"></i>
+                    <span>Cloudflare R2</span>
+                    <div class="status-dot online"></div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item settings"><i data-lucide="settings"></i> Settings</a>
+                <div class="user-profile">
+                    <div class="avatar">U</div>
+                    <div class="user-info">
+                        <span class="name">Guest User</span>
+                        <span class="plan">Free Tier</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="top-header">
+                <div class="search-bar glass">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search across all storages...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-icon"><i data-lucide="bell"></i></button>
+                    <button class="btn btn-primary"><i data-lucide="plus"></i> Add Storage</button>
+                </div>
+            </header>
+
+            <section class="dashboard-hero">
+                <div class="welcome-text">
+                    <h2>Welcome to your Control Center</h2>
+                    <p>Visualizing 1.2 TB of data across 3 providers.</p>
+                </div>
+            </section>
+
+            <!-- Storage Overview Grid -->
+            <section class="overview-grid">
+                <div class="stat-card glass">
+                    <div class="card-header">
+                        <i data-lucide="pie-chart" class="icon-indigo"></i>
+                        <span>Total Usage</span>
+                    </div>
+                    <div class="stat-value">65%</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%;"></div>
+                    </div>
+                    <div class="card-footer">
+                        <span>1.2TB / 2.0TB</span>
+                    </div>
+                </div>
+
+                <div class="stat-card glass">
+                    <div class="card-header">
+                        <i data-lucide="file" class="icon-cyan"></i>
+                        <span>Total Files</span>
+                    </div>
+                    <div class="stat-value">12,482</div>
+                    <div class="card-footer">
+                        <span>+24 today</span>
+                    </div>
+                </div>
+
+                <div class="stat-card glass">
+                    <div class="card-header">
+                        <i data-lucide="activity" class="icon-pink"></i>
+                        <span>Recent Activity</span>
+                    </div>
+                    <div class="stat-value">Active</div>
+                    <div class="card-footer">
+                        <span>Healthy sync</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- File Explorer Shell -->
+            <section class="file-explorer-shell glass">
+                <div class="explorer-header">
+                    <h3>Recent Files</h3>
+                    <div class="view-toggles">
+                        <button class="btn-toggle active"><i data-lucide="layout-grid"></i></button>
+                        <button class="btn-toggle"><i data-lucide="list"></i></button>
+                    </div>
+                </div>
+                <div class="file-grid">
+                    <!-- Placeholder items for initial UI -->
+                    <div class="file-item glass-hover">
+                        <div class="file-icon"><i data-lucide="file-video" class="icon-indigo"></i></div>
+                        <span class="file-name">Movie_Export.mp4</span>
+                        <span class="file-meta">1.5 GB • Google Drive</span>
+                    </div>
+                    <div class="file-item glass-hover">
+                        <div class="file-icon"><i data-lucide="file-text" class="icon-cyan"></i></div>
+                        <span class="file-name">Project_Proposal.pdf</span>
+                        <span class="file-meta">4.2 MB • OneDrive</span>
+                    </div>
+                    <div class="file-item glass-hover">
+                        <div class="file-icon"><i data-lucide="image" class="icon-pink"></i></div>
+                        <span class="file-name">Vacation_Photo.jpg</span>
+                        <span class="file-meta">2.8 MB • Dropbox</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
